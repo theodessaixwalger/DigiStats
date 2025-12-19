@@ -1,0 +1,20 @@
+{
+  "sales": [
+    {
+      "id": "4ce38019-f5aa-4e27-a722-2037142f070e",
+      "date": "2025-12-09",
+      "productName": "React",
+      "category": "Formation",
+      "price": 25,
+      "cost": 0
+    },
+    {
+      "id": "f3cdf8ec-bef0-4067-a650-16249fa1e862",
+      "date": "2025-12-09",
+      "productName": "Amazon",
+      "category": "Ebook",
+      "price": 10,
+      "cost": 0
+    }
+  ]
+}

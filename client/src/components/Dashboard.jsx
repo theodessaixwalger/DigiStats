@@ -27,12 +27,10 @@ const Dashboard = () => {
         loadSales();
     }, []);
 
-    // KPIs Calculation
     const totalRevenue = sales.reduce((acc, sale) => acc + sale.price, 0);
     const totalCost = sales.reduce((acc, sale) => acc + sale.cost, 0);
     const netProfit = totalRevenue - totalCost;
 
-    // Growth Logic
     const currentMonth = new Date().getMonth();
     const currentMonthSales = sales.filter(s => new Date(s.date).getMonth() === currentMonth);
     const lastMonthSales = sales.filter(s => new Date(s.date).getMonth() === currentMonth - 1);
@@ -42,7 +40,6 @@ const Dashboard = () => {
     
     const growth = calculateGrowth(currentMonthRevenue, lastMonthRevenue);
 
-    // Forecast Logic
     const currentDay = new Date().getDate();
     const daysInMonth = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate();
     const averageDailyRevenue = currentDay > 0 ? currentMonthRevenue / currentDay : 0;

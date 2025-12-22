@@ -47,7 +47,7 @@ app.post('/api/sales', (req, res) => {
   try {
       const { date, productName, category, price, cost } = req.body;
 
-      if (!date || !productName || !category || !price === undefined || !cost === undefined) {
+      if (!date || !productName || !category || price === undefined) {
         return res.status(400).json({ error: 'Missing required fields' });
       }
 
@@ -59,7 +59,7 @@ app.post('/api/sales', (req, res) => {
         productName,
         category,
         price: parseFloat(price),
-        cost: parseFloat(cost)
+        cost: cost !== undefined ? parseFloat(cost) : 0
       };
 
       db.sales.push(newSale);

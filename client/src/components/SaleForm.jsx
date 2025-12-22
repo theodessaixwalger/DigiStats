@@ -8,7 +8,7 @@ const SaleForm = ({ onSaleAdded }) => {
         productName: '',
         category: 'Formation',
         price: '',
-        cost: ''
+        quantity: 1
     });
 
     const handleChange = (e) => {
@@ -18,7 +18,19 @@ const SaleForm = ({ onSaleAdded }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await createSale(formData);
+            const quantity = parseInt(formData.quantity) || 1;
+            
+            // Create multiple transactions based on quantity
+            for (let i = 0; i < quantity; i++) {
+                await createSale({
+                    date: formData.date,
+                    productName: formData.productName,
+                    category: formData.category,
+                    price: formData.price,
+                    cost: 0
+                });
+            }
+            
             if (onSaleAdded) onSaleAdded();
             
             setFormData({
@@ -26,7 +38,7 @@ const SaleForm = ({ onSaleAdded }) => {
                 productName: '',
                 category: 'Formation',
                 price: '',
-                cost: ''
+                quantity: 1
             });
         } catch (error) {
             console.error("Error adding sale:", error);
@@ -95,15 +107,14 @@ const SaleForm = ({ onSaleAdded }) => {
                     />
                 </div>
                 <div>
-                    <label className={labelClasses}>Coût (€)</label>
+                    <label className={labelClasses}>Nombre de Transactions</label>
                     <input
                         type="number"
-                        name="cost"
-                        value={formData.cost}
+                        name="quantity"
+                        value={formData.quantity}
                         onChange={handleChange}
                         className={inputClasses}
-                        step="0.01"
-                        min="0"
+                        min="1"
                         required
                     />
                 </div>

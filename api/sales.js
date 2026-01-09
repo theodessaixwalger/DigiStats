@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Sale = require('./Sale');
+const Sale = require('./models/Sale');
 
 let isConnected = false;
 

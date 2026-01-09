@@ -229,7 +229,7 @@ const Transactions = () => {
                         </thead>
                         <tbody className="bg-[#FCFCFD] dark:bg-[#121212] divide-y divide-[#E5E5E7] dark:divide-[#262626]">
                             {filteredSales.map((sale) => (
-                                <tr key={sale.id} className="hover:bg-[#F7F7F8] dark:hover:bg-[#1A1A1A] transition-colors duration-150">
+                                <tr key={sale._id} className="hover:bg-[#F7F7F8] dark:hover:bg-[#1A1A1A] transition-colors duration-150">
                                     <td className="px-6 py-4 whitespace-nowrap text-sm text-[#6B6B6B] dark:text-[#A3A3A3]">
                                         {new Date(sale.date).toLocaleDateString('fr-FR')}
                                     </td>
@@ -257,7 +257,7 @@ const Transactions = () => {
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-sm text-right">
                                         <button
-                                            onClick={() => handleDelete(sale.id, sale.productName)}
+                                            onClick={() => handleDelete(sale._id, sale.productName)}
                                             className="p-2 rounded-lg text-[#9E9E9E] hover:text-red-600 hover:bg-red-50 dark:text-[#737373] dark:hover:text-red-400 dark:hover:bg-red-950/20 transition-all duration-150"
                                             title="Supprimer"
                                         >

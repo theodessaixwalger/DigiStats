@@ -53,8 +53,9 @@ const SaleForm = ({ onSaleAdded }) => {
         <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <label className={labelClasses}>Date</label>
+                    <label htmlFor="sale-date" className={labelClasses}>Date</label>
                     <input
+                        id="sale-date"
                         type="date"
                         name="date"
                         value={formData.date}
@@ -64,8 +65,9 @@ const SaleForm = ({ onSaleAdded }) => {
                     />
                 </div>
                 <div>
-                    <label className={labelClasses}>Catégorie</label>
+                    <label htmlFor="sale-category" className={labelClasses}>Catégorie</label>
                     <select
+                        id="sale-category"
                         name="category"
                         value={formData.category}
                         onChange={handleChange}
@@ -79,8 +81,9 @@ const SaleForm = ({ onSaleAdded }) => {
             </div>
 
             <div>
-                <label className={labelClasses}>Nom du Produit</label>
+                <label htmlFor="sale-productName" className={labelClasses}>Nom du Produit</label>
                 <input
+                    id="sale-productName"
                     type="text"
                     name="productName"
                     value={formData.productName}
@@ -93,8 +96,9 @@ const SaleForm = ({ onSaleAdded }) => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <label className={labelClasses}>Prix de Vente (€)</label>
+                    <label htmlFor="sale-price" className={labelClasses}>Prix de Vente (€)</label>
                     <input
+                        id="sale-price"
                         type="number"
                         name="price"
                         value={formData.price}
@@ -106,8 +110,9 @@ const SaleForm = ({ onSaleAdded }) => {
                     />
                 </div>
                 <div>
-                    <label className={labelClasses}>Nombre de Transactions</label>
+                    <label htmlFor="sale-quantity" className={labelClasses}>Quantité</label>
                     <input
+                        id="sale-quantity"
                         type="number"
                         name="quantity"
                         value={formData.quantity}

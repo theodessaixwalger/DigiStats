@@ -124,8 +124,9 @@ const Transactions = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                                 {/* Date Range */}
                                 <div>
-                                    <label className="block text-xs font-medium text-[#6B6B6B] dark:text-[#A3A3A3] mb-2">Date de début</label>
+                                    <label htmlFor="filter-start-date" className="block text-xs font-medium text-[#6B6B6B] dark:text-[#A3A3A3] mb-2">Date de début</label>
                                     <input
+                                        id="filter-start-date"
                                         type="date"
                                         value={filters.startDate}
                                         onChange={(e) => handleFilterChange('startDate', e.target.value)}
@@ -133,8 +134,9 @@ const Transactions = () => {
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-xs font-medium text-[#6B6B6B] dark:text-[#A3A3A3] mb-2">Date de fin</label>
+                                    <label htmlFor="filter-end-date" className="block text-xs font-medium text-[#6B6B6B] dark:text-[#A3A3A3] mb-2">Date de fin</label>
                                     <input
+                                        id="filter-end-date"
                                         type="date"
                                         value={filters.endDate}
                                         onChange={(e) => handleFilterChange('endDate', e.target.value)}
@@ -144,8 +146,9 @@ const Transactions = () => {
 
                                 {/* Price Range */}
                                 <div>
-                                    <label className="block text-xs font-medium text-[#6B6B6B] dark:text-[#A3A3A3] mb-2">Prix min (€)</label>
+                                    <label htmlFor="filter-min-price" className="block text-xs font-medium text-[#6B6B6B] dark:text-[#A3A3A3] mb-2">Prix min (€)</label>
                                     <input
+                                        id="filter-min-price"
                                         type="number"
                                         value={filters.minPrice}
                                         onChange={(e) => handleFilterChange('minPrice', e.target.value)}
@@ -156,8 +159,9 @@ const Transactions = () => {
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-xs font-medium text-[#6B6B6B] dark:text-[#A3A3A3] mb-2">Prix max (€)</label>
+                                    <label htmlFor="filter-max-price" className="block text-xs font-medium text-[#6B6B6B] dark:text-[#A3A3A3] mb-2">Prix max (€)</label>
                                     <input
+                                        id="filter-max-price"
                                         type="number"
                                         value={filters.maxPrice}
                                         onChange={(e) => handleFilterChange('maxPrice', e.target.value)}

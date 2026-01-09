@@ -101,7 +101,7 @@ const Dashboard = () => {
     return (
         <Layout>
             <div className="mb-8">
-                <h1 className="text-xl font-semibold bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent mb-1">Tableau de Bord</h1>
+                <h1 className="text-2xl font-semibold bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent mb-1">Tableau de Bord</h1>
                 <p className="text-sm text-[#6B6B6B] dark:text-[#A3A3A3]">
                     {new Date().toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}
                 </p>
@@ -182,10 +182,11 @@ const Dashboard = () => {
                             Modifier l'Objectif Mensuel
                         </h3>
                         <div className="mb-6">
-                            <label className="block text-sm font-medium text-[#6B6B6B] dark:text-[#A3A3A3] mb-2">
+                            <label htmlFor="goal-input" className="block text-sm font-medium text-[#6B6B6B] dark:text-[#A3A3A3] mb-2">
                                 Objectif de Revenu (€)
                             </label>
                             <input
+                                id="goal-input"
                                 type="number"
                                 value={tempGoal}
                                 onChange={(e) => setTempGoal(e.target.value)}

@@ -1,4 +1,5 @@
-const API_URL = 'http://localhost:5000/api/sales';
+// Use relative URL for production (Vercel) and proxy for development
+const API_URL = import.meta.env.VITE_API_URL || '/api/sales';
 
 export const fetchSales = async () => {
     const response = await fetch(API_URL);

@@ -6,7 +6,7 @@ const SaleForm = ({ onSaleAdded }) => {
     const [formData, setFormData] = useState({
         date: new Date().toISOString().split('T')[0],
         productName: '',
-        category: 'Formation',
+        category: 'Service',
         price: '',
         quantity: 1
     });
@@ -36,7 +36,7 @@ const SaleForm = ({ onSaleAdded }) => {
             setFormData({
                 date: formData.date,
                 productName: '',
-                category: 'Formation',
+                category: 'Service',
                 price: '',
                 quantity: 1
             });
@@ -71,10 +71,9 @@ const SaleForm = ({ onSaleAdded }) => {
                         onChange={handleChange}
                         className={inputClasses}
                     >
-                        <option value="Formation">Formation</option>
-                        <option value="Ebook">Ebook</option>
-                        <option value="Coaching">Coaching</option>
                         <option value="Service">Service</option>
+                        <option value="Ebook">Ebook</option>
+                        <option value="Vinted">Vinted</option>
                     </select>
                 </div>
             </div>

@@ -173,7 +173,7 @@ const Transactions = () => {
                             <div>
                                 <label className="block text-xs font-medium text-[#6B6B6B] dark:text-[#A3A3A3] mb-2">Catégories</label>
                                 <div className="flex flex-wrap gap-3">
-                                    {['Formation', 'Ebook', 'Coaching', 'Service'].map(category => (
+                                    {['Service', 'Ebook', 'Vinted'].map(category => (
                                         <label key={category} className="flex items-center gap-2 cursor-pointer group">
                                             <input
                                                 type="checkbox"
@@ -183,10 +183,9 @@ const Transactions = () => {
                                             />
                                             <span className={`text-sm px-2.5 py-1 rounded-full transition-all duration-150 ${
                                                 filters.categories.includes(category)
-                                                    ? category === 'Formation' ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300' :
+                                                    ? category === 'Service' ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300' :
                                                       category === 'Ebook' ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300' :
-                                                      category === 'Coaching' ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300' :
-                                                      'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300'
+                                                      'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300'
                                                     : 'bg-[#F0F0F1] dark:bg-[#1A1A1A] text-[#6B6B6B] dark:text-[#A3A3A3] group-hover:bg-[#E5E5E7] dark:group-hover:bg-[#262626]'
                                             }`}>
                                                 {category}
@@ -238,10 +237,9 @@ const Transactions = () => {
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-sm text-[#6B6B6B] dark:text-[#A3A3A3]">
                                         <span className={`px-2.5 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${
-                                            sale.category === 'Formation' ? 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300' :
+                                            sale.category === 'Service' ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300' :
                                             sale.category === 'Ebook' ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300' :
-                                            sale.category === 'Coaching' ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300' :
-                                            'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300'
+                                            'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300'
                                         }`}>
                                             {sale.category}
                                         </span>

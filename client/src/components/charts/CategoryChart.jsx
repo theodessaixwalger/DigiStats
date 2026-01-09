@@ -3,10 +3,9 @@ import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recha
 
 // Match the category colors from Transactions page
 const CATEGORY_COLORS = {
-    'Formation': '#6366F1',    // Indigo
+    'Service': '#F59E0B',      // Amber
     'Ebook': '#A855F7',        // Purple
-    'Coaching': '#10B981',     // Emerald
-    'Service': '#F59E0B'       // Amber
+    'Vinted': '#10B981'        // Emerald
 };
 
 const CategoryChart = ({ sales }) => {

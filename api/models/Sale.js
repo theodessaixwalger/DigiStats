@@ -13,7 +13,7 @@ const saleSchema = new mongoose.Schema({
     category: {
         type: String,
         required: true,
-        enum: ['Formation', 'Ebook', 'Coaching', 'Service']
+        enum: ['Service', 'Ebook', 'Vinted']
     },
     price: {
         type: Number,

@@ -1,4 +1,3 @@
-require('dotenv').config({ path: '../server/.env' });
 const mongoose = require('mongoose');
 
 module.exports = async (req, res) => {

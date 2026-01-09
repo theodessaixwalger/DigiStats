@@ -1,21 +1,21 @@
-require('dotenv').config({ path: '../server/.env' });
 const mongoose = require('mongoose');
-const Sale = require('../server/models/Sale');
+const Sale = require('./Sale');
 
-let cachedDb = null;
+let isConnected = false;
 
 async function connectToDatabase() {
-    if (cachedDb) {
-        return cachedDb;
+    if (isConnected) {
+        return;
     }
 
-    const db = await mongoose.connect(process.env.MONGODB_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    });
-
-    cachedDb = db;
-    return db;
+    try {
+        await mongoose.connect(process.env.MONGODB_URI);
+        isConnected = true;
+        console.log('✅ Connected to MongoDB');
+    } catch (error) {
+        console.error('❌ MongoDB connection error:', error);
+        throw error;
+    }
 }
 
 module.exports = async (req, res) => {

@@ -49,9 +49,11 @@ const Sidebar = () => {
                 ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
             `}>
                 <div className="p-6 border-b border-[#E5E5E7] dark:border-[#262626] flex justify-between items-center">
-                    <h1 className="text-xl font-semibold text-[#1A1A1A] dark:text-[#F5F5F5]">
-                        DigiStats
-                    </h1>
+                    <img 
+                        src="/logo.png" 
+                        alt="DigiStats" 
+                        className="h-8 w-auto"
+                    />
                     <ThemeToggle />
                 </div>
 

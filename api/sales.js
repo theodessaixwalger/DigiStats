@@ -57,25 +57,6 @@ module.exports = async (req, res) => {
             return res.status(201).json(newSale);
         }
 
-        // DELETE /api/sales/:id - Delete a sale by ID
-        if (req.method === 'DELETE') {
-            // Extract ID from URL path (e.g., /api/sales/123 -> 123)
-            const urlParts = req.url.split('/');
-            const id = urlParts[urlParts.length - 1].split('?')[0]; // Remove query params if any
-            
-            if (!id || id === 'sales') {
-                return res.status(400).json({ error: 'Sale ID is required' });
-            }
-            
-            const deletedSale = await Sale.findByIdAndDelete(id);
-
-            if (!deletedSale) {
-                return res.status(404).json({ error: 'Sale not found' });
-            }
-
-            return res.status(200).json({ message: 'Sale deleted successfully' });
-        }
-
         return res.status(405).json({ error: 'Method not allowed' });
 
     } catch (error) {

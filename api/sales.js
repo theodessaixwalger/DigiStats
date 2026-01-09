@@ -59,7 +59,13 @@ module.exports = async (req, res) => {
 
         // DELETE /api/sales/:id - Delete a sale by ID
         if (req.method === 'DELETE') {
-            const id = req.url.split('/').pop();
+            // Extract ID from URL path (e.g., /api/sales/123 -> 123)
+            const urlParts = req.url.split('/');
+            const id = urlParts[urlParts.length - 1].split('?')[0]; // Remove query params if any
+            
+            if (!id || id === 'sales') {
+                return res.status(400).json({ error: 'Sale ID is required' });
+            }
             
             const deletedSale = await Sale.findByIdAndDelete(id);
 

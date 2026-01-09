@@ -213,8 +213,10 @@ const Transactions = () => {
             </div>
 
             <Card>
-                <div className="overflow-x-auto">
-                    <table className="min-w-full divide-y divide-[#E5E5E7] dark:divide-[#262626]">
+                <div className="overflow-x-auto -mx-6 sm:mx-0">
+                    <div className="inline-block min-w-full align-middle">
+                        <div className="overflow-hidden">
+                            <table className="min-w-full divide-y divide-[#E5E5E7] dark:divide-[#262626]">
                         <thead className="bg-[#F0F0F1] dark:bg-[#1A1A1A]">
                             <tr>
                                 <th className="px-6 py-3 text-left text-xs font-medium text-[#9E9E9E] dark:text-[#737373] uppercase tracking-wider">Date</th>
@@ -271,6 +273,8 @@ const Transactions = () => {
                             Aucune transaction trouvée.
                         </div>
                     )}
+                        </div>
+                    </div>
                 </div>
             </Card>
         </Layout>

@@ -19,7 +19,7 @@ const RevenueChart = ({ sales }) => {
     const CustomTooltip = ({ active, payload, label }) => {
         if (active && payload && payload.length) {
             return (
-                <div className="bg-[#FCFCFD] dark:bg-[#1A1A1A] border border-[#E5E5E7] dark:border-[#262626] p-3 rounded-lg shadow-lg">
+                <div className="bg-[#F5F5F7] dark:bg-[#1A1A1A] border border-[#D2D4D6] dark:border-[#262626] p-3 rounded-lg shadow-lg">
                     <p className="text-xs font-medium text-[#6B6B6B] dark:text-[#A3A3A3] mb-2">
                         {new Date(label).toLocaleDateString('fr-FR')}
                     </p>
@@ -48,17 +48,17 @@ const RevenueChart = ({ sales }) => {
                             <stop offset="95%" stopColor="#14B8A6" stopOpacity={0.8}/>
                         </linearGradient>
                     </defs>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#E8E8E8" className="dark:stroke-[#262626]" opacity={0.3} />
+                    <CartesianGrid strokeDasharray="3 3" stroke="#D2D4D6" className="dark:stroke-[#262626]" opacity={0.3} />
                     <XAxis 
                         dataKey="date" 
                         tick={{ fill: '#9E9E9E', fontSize: 12 }}
                         tickFormatter={(value) => new Date(value).toLocaleDateString('fr-FR', { month: 'short', day: 'numeric' })}
-                        stroke="#E8E8E8"
+                        stroke="#D2D4D6"
                         className="dark:stroke-[#262626]"
                     />
                     <YAxis 
                         tick={{ fill: '#9E9E9E', fontSize: 12 }}
-                        stroke="#E8E8E8"
+                        stroke="#D2D4D6"
                         className="dark:stroke-[#262626]"
                     />
                     <Tooltip content={<CustomTooltip />} />

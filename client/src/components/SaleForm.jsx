@@ -46,7 +46,7 @@ const SaleForm = ({ onSaleAdded }) => {
         }
     };
 
-    const inputClasses = "w-full px-3 py-2 bg-[#FCFCFD] dark:bg-[#121212] border border-[#E5E5E7] dark:border-[#262626] text-[#1A1A1A] dark:text-[#F5F5F5] text-sm focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 transition-all duration-150 rounded-md";
+    const inputClasses = "w-full px-3 py-2 bg-[#F5F5F7] dark:bg-[#121212] border border-[#D2D4D6] dark:border-[#262626] text-[#1A1A1A] dark:text-[#F5F5F5] text-sm focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 transition-all duration-150 rounded-md";
     const labelClasses = "block text-xs font-medium text-[#6B6B6B] dark:text-[#A3A3A3] mb-2";
 
     return (

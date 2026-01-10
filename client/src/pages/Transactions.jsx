@@ -116,7 +116,7 @@ const Transactions = () => {
                                     placeholder="Rechercher par nom de produit ou catégorie..." 
                                     value={filters.search}
                                     onChange={(e) => handleFilterChange('search', e.target.value)}
-                                    className="w-full pl-10 pr-4 py-2 border border-[#E5E5E7] dark:border-[#262626] bg-[#FCFCFD] dark:bg-[#121212] text-[#1A1A1A] dark:text-[#F5F5F5] text-sm focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 transition-all duration-150 rounded-md"
+                                    className="w-full pl-10 pr-4 py-2 border border-[#D2D4D6] dark:border-[#262626] bg-[#F5F5F7] dark:bg-[#121212] text-[#1A1A1A] dark:text-[#F5F5F5] text-sm focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 transition-all duration-150 rounded-md"
                                 />
                                 <Search className="w-4 h-4 text-[#9E9E9E] dark:text-[#737373] absolute left-3 top-3" />
                             </div>
@@ -130,7 +130,7 @@ const Transactions = () => {
                                         type="date"
                                         value={filters.startDate}
                                         onChange={(e) => handleFilterChange('startDate', e.target.value)}
-                                        className="w-full px-3 py-2 border border-[#E5E5E7] dark:border-[#262626] bg-[#FCFCFD] dark:bg-[#121212] text-[#1A1A1A] dark:text-[#F5F5F5] text-sm focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 transition-all duration-150 rounded-md dark:[color-scheme:dark]"
+                                        className="w-full px-3 py-2 border border-[#D2D4D6] dark:border-[#262626] bg-[#F5F5F7] dark:bg-[#121212] text-[#1A1A1A] dark:text-[#F5F5F5] text-sm focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 transition-all duration-150 rounded-md dark:[color-scheme:dark]"
                                     />
                                 </div>
                                 <div>
@@ -140,7 +140,7 @@ const Transactions = () => {
                                         type="date"
                                         value={filters.endDate}
                                         onChange={(e) => handleFilterChange('endDate', e.target.value)}
-                                        className="w-full px-3 py-2 border border-[#E5E5E7] dark:border-[#262626] bg-[#FCFCFD] dark:bg-[#121212] text-[#1A1A1A] dark:text-[#F5F5F5] text-sm focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 transition-all duration-150 rounded-md dark:[color-scheme:dark]"
+                                        className="w-full px-3 py-2 border border-[#D2D4D6] dark:border-[#262626] bg-[#F5F5F7] dark:bg-[#121212] text-[#1A1A1A] dark:text-[#F5F5F5] text-sm focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 transition-all duration-150 rounded-md dark:[color-scheme:dark]"
                                     />
                                 </div>
 
@@ -155,7 +155,7 @@ const Transactions = () => {
                                         placeholder="0"
                                         min="0"
                                         step="0.01"
-                                        className="w-full px-3 py-2 border border-[#E5E5E7] dark:border-[#262626] bg-[#FCFCFD] dark:bg-[#121212] text-[#1A1A1A] dark:text-[#F5F5F5] text-sm focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 transition-all duration-150 rounded-md"
+                                        className="w-full px-3 py-2 border border-[#D2D4D6] dark:border-[#262626] bg-[#F5F5F7] dark:bg-[#121212] text-[#1A1A1A] dark:text-[#F5F5F5] text-sm focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 transition-all duration-150 rounded-md"
                                     />
                                 </div>
                                 <div>
@@ -168,7 +168,7 @@ const Transactions = () => {
                                         placeholder="∞"
                                         min="0"
                                         step="0.01"
-                                        className="w-full px-3 py-2 border border-[#E5E5E7] dark:border-[#262626] bg-[#FCFCFD] dark:bg-[#121212] text-[#1A1A1A] dark:text-[#F5F5F5] text-sm focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 transition-all duration-150 rounded-md"
+                                        className="w-full px-3 py-2 border border-[#D2D4D6] dark:border-[#262626] bg-[#F5F5F7] dark:bg-[#121212] text-[#1A1A1A] dark:text-[#F5F5F5] text-sm focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 transition-all duration-150 rounded-md"
                                     />
                                 </div>
                             </div>
@@ -183,7 +183,7 @@ const Transactions = () => {
                                                 type="checkbox"
                                                 checked={filters.categories.includes(category)}
                                                 onChange={() => handleCategoryToggle(category)}
-                                                className="w-4 h-4 text-indigo-600 border-[#E5E5E7] dark:border-[#262626] rounded focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 cursor-pointer"
+                                                className="w-4 h-4 text-indigo-600 border-[#D2D4D6] dark:border-[#262626] rounded focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 cursor-pointer"
                                             />
                                             <span className={`text-sm px-2.5 py-1 rounded-full transition-all duration-150 ${
                                                 filters.categories.includes(category)
@@ -200,7 +200,7 @@ const Transactions = () => {
                             </div>
 
                             {/* Reset Button */}
-                            <div className="flex justify-between items-center pt-2 border-t border-[#E5E5E7] dark:border-[#262626]">
+                            <div className="flex justify-between items-center pt-2 border-t border-[#D2D4D6] dark:border-[#262626]">
                                 <p className="text-sm text-[#6B6B6B] dark:text-[#A3A3A3]">
                                     <span className="font-medium text-[#1A1A1A] dark:text-[#F5F5F5]">{filteredSales.length}</span> transaction{filteredSales.length > 1 ? 's' : ''} trouvée{filteredSales.length > 1 ? 's' : ''}
                                 </p>
@@ -220,7 +220,7 @@ const Transactions = () => {
                 <div className="overflow-x-auto -mx-6 sm:mx-0">
                     <div className="inline-block min-w-full align-middle">
                         <div className="overflow-hidden">
-                            <table className="min-w-full divide-y divide-[#E5E5E7] dark:divide-[#262626]">
+                            <table className="min-w-full divide-y divide-[#D2D4D6] dark:divide-[#262626]">
                         <thead className="bg-[#F0F0F1] dark:bg-[#1A1A1A]">
                             <tr>
                                 <th className="px-6 py-3 text-left text-xs font-medium text-[#9E9E9E] dark:text-[#737373] uppercase tracking-wider">Date</th>
@@ -232,7 +232,7 @@ const Transactions = () => {
                                 <th className="px-6 py-3 text-right text-xs font-medium text-[#9E9E9E] dark:text-[#737373] uppercase tracking-wider"></th>
                             </tr>
                         </thead>
-                        <tbody className="bg-[#FCFCFD] dark:bg-[#121212] divide-y divide-[#E5E5E7] dark:divide-[#262626]">
+                        <tbody className="bg-[#F5F5F7] dark:bg-[#121212] divide-y divide-[#D2D4D6] dark:divide-[#262626]">
                             {filteredSales.map((sale) => (
                                 <tr key={sale._id} className="hover:bg-[#F7F7F8] dark:hover:bg-[#1A1A1A] transition-colors duration-150">
                                     <td className="px-6 py-4 whitespace-nowrap text-sm text-[#6B6B6B] dark:text-[#A3A3A3]">

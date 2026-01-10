@@ -28,7 +28,7 @@ const GoalChart = ({ currentRevenue, goal = 5000 }) => {
 
             {/* Progress Bar */}
             <div className="relative">
-                <div className="h-8 bg-[#F0F0F1] dark:bg-[#1A1A1A] rounded-full overflow-hidden border border-[#E5E5E7] dark:border-[#262626]">
+                <div className="h-8 bg-[#F0F0F1] dark:bg-[#1A1A1A] rounded-full overflow-hidden border border-[#D2D4D6] dark:border-[#262626]">
                     <div 
                         className={`h-full bg-gradient-to-r ${
                             isOverGoal 
@@ -49,7 +49,7 @@ const GoalChart = ({ currentRevenue, goal = 5000 }) => {
                         style={{ left: `${Math.min(progress, 95)}%` }}
                     >
                         <div className="relative -translate-x-1/2">
-                            <div className="bg-[#FCFCFD] dark:bg-[#121212] border-2 border-indigo-500 dark:border-indigo-400 rounded-full px-3 py-1 shadow-lg">
+                            <div className="bg-[#F5F5F7] dark:bg-[#121212] border-2 border-indigo-500 dark:border-indigo-400 rounded-full px-3 py-1 shadow-lg">
                                 <p className="text-xs font-bold text-indigo-600 dark:text-indigo-400 whitespace-nowrap">
                                     {currentRevenue.toFixed(0)}€
                                 </p>

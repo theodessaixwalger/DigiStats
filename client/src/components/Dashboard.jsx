@@ -73,7 +73,7 @@ const Dashboard = () => {
         };
         
         return (
-            <div className="bg-[#FCFCFD] dark:bg-[#121212] border border-[#E5E5E7] dark:border-[#262626] rounded-xl p-6 relative overflow-hidden group hover:shadow-lg transition-shadow duration-300">
+            <div className="bg-[#F5F5F7] dark:bg-[#121212] border border-[#D2D4D6] dark:border-[#262626] rounded-xl p-6 relative overflow-hidden group hover:shadow-lg transition-shadow duration-300">
                 {/* Gradient accent bar */}
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${colorClasses[color]}`}></div>
                 
@@ -177,7 +177,7 @@ const Dashboard = () => {
             {/* Goal Edit Modal */}
             {isEditingGoal && (
                 <div className="fixed inset-0 bg-black/50 dark:bg-black/70 flex items-center justify-center z-50" onClick={handleCancelGoal}>
-                    <div className="bg-[#FCFCFD] dark:bg-[#121212] rounded-xl p-6 w-full max-w-md mx-4 shadow-2xl border border-[#E5E5E7] dark:border-[#262626]" onClick={(e) => e.stopPropagation()}>
+                    <div className="bg-[#F5F5F7] dark:bg-[#121212] rounded-xl p-6 w-full max-w-md mx-4 shadow-2xl border border-[#D2D4D6] dark:border-[#262626]" onClick={(e) => e.stopPropagation()}>
                         <h3 className="text-lg font-semibold text-[#1A1A1A] dark:text-[#F5F5F5] mb-4">
                             Modifier l'Objectif Mensuel
                         </h3>
@@ -190,7 +190,7 @@ const Dashboard = () => {
                                 type="number"
                                 value={tempGoal}
                                 onChange={(e) => setTempGoal(e.target.value)}
-                                className="w-full px-4 py-2 border border-[#E5E5E7] dark:border-[#262626] bg-[#FCFCFD] dark:bg-[#121212] text-[#1A1A1A] dark:text-[#F5F5F5] rounded-lg focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 transition-all duration-150"
+                                className="w-full px-4 py-2 border border-[#D2D4D6] dark:border-[#262626] bg-[#F5F5F7] dark:bg-[#121212] text-[#1A1A1A] dark:text-[#F5F5F5] rounded-lg focus:outline-none focus:border-indigo-500 dark:focus:border-indigo-400 focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 transition-all duration-150"
                                 placeholder="5000"
                                 min="0"
                                 step="100"
@@ -200,7 +200,7 @@ const Dashboard = () => {
                         <div className="flex gap-3">
                             <button
                                 onClick={handleCancelGoal}
-                                className="flex-1 px-4 py-2 border border-[#E5E5E7] dark:border-[#262626] text-[#6B6B6B] dark:text-[#A3A3A3] rounded-lg hover:bg-[#F0F0F1] dark:hover:bg-[#1A1A1A] transition-colors duration-150"
+                                className="flex-1 px-4 py-2 border border-[#D2D4D6] dark:border-[#262626] text-[#6B6B6B] dark:text-[#A3A3A3] rounded-lg hover:bg-[#F0F0F1] dark:hover:bg-[#1A1A1A] transition-colors duration-150"
                             >
                                 Annuler
                             </button>

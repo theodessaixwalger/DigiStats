@@ -222,7 +222,7 @@ const Forecast = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="pt-3 border-t border-[#E5E5E7] dark:border-[#262626]">
+                        <div className="pt-3 border-t border-[#D2D4D6] dark:border-[#262626]">
                             <p className="text-xs text-[#9E9E9E] dark:text-[#737373] italic">
                                 Note: Les prévisions sont indicatives et basées sur vos données actuelles. 
                                 Les résultats réels peuvent varier.

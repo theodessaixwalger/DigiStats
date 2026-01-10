@@ -5,15 +5,15 @@
 @layer base {
   :root {
     /* Light mode - Refined minimalist palette */
-    --color-bg-primary: #F7F7F8;
-    --color-bg-secondary: #FCFCFD;
-    --color-bg-tertiary: #F0F0F1;
+    --color-bg-primary: #ECECEC;
+    --color-bg-secondary: #F5F5F5;
+    --color-bg-tertiary: #e8e8e8fb;
     
     --color-text-primary: #1A1A1A;
     --color-text-secondary: #6B6B6B;
     --color-text-tertiary: #9E9E9E;
     
-    --color-border-primary: #E5E5E7;
+    --color-border-primary: #D2D4D6;
     --color-border-secondary: #ECECEE;
     
     --color-accent: #2D2D2D;
@@ -78,7 +78,7 @@
   }
 
   body {
-    @apply bg-[#F7F7F8] text-gray-900 dark:bg-[#0A0A0A] dark:text-gray-50;
+    @apply bg-[#ECECEC] text-gray-900 dark:bg-[#0A0A0A] dark:text-gray-50;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

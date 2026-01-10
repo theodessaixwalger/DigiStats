@@ -28,7 +28,7 @@ const CategoryChart = ({ sales }) => {
             const total = data.reduce((sum, item) => sum + item.value, 0);
             const percentage = ((payload[0].value / total) * 100).toFixed(1);
             return (
-                <div className="bg-[#FCFCFD] dark:bg-[#1A1A1A] border border-[#E5E5E7] dark:border-[#262626] p-3 rounded-lg shadow-lg">
+                <div className="bg-[#F5F5F7] dark:bg-[#1A1A1A] border border-[#D2D4D6] dark:border-[#262626] p-3 rounded-lg shadow-lg">
                     <p className="text-sm font-semibold text-[#1A1A1A] dark:text-[#F5F5F5] mb-1">
                         {payload[0].name}
                     </p>

@@ -24,7 +24,7 @@ const Sidebar = () => {
             {/* Mobile Menu Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="lg:hidden fixed top-4 right-4 z-50 p-2 bg-[#FCFCFD] dark:bg-[#121212] border border-[#E5E5E7] dark:border-[#262626] rounded-lg shadow-lg"
+                className="lg:hidden fixed top-4 right-4 z-50 p-2 bg-[#F5F5F7] dark:bg-[#121212] border border-[#D2D4D6] dark:border-[#262626] rounded-lg shadow-lg"
             >
                 {isOpen ? (
                     <X className="w-6 h-6 text-[#1A1A1A] dark:text-[#F5F5F5]" />
@@ -43,12 +43,12 @@ const Sidebar = () => {
 
             {/* Sidebar */}
             <div className={`
-                w-64 bg-[#FCFCFD] dark:bg-[#121212] h-screen fixed left-0 top-0 
-                border-r border-[#E5E5E7] dark:border-[#262626] flex flex-col z-40
+                w-64 bg-[#ededed] dark:bg-[#121212] h-screen fixed left-0 top-0 
+                border-r border-[#D2D4D6] dark:border-[#262626] flex flex-col z-40
                 transition-transform duration-300 ease-in-out
                 ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
             `}>
-                <div className="p-6 border-b border-[#E5E5E7] dark:border-[#262626] flex justify-between items-center">
+                <div className="p-6 border-b border-[#D2D4D6] dark:border-[#262626] flex justify-between items-center">
                     <img 
                         src="/logo.png" 
                         alt="DigiStats" 
@@ -72,7 +72,7 @@ const Sidebar = () => {
                     </NavLink>
                 </nav>
 
-                <div className="border-t border-[#E5E5E7] dark:border-[#262626]">
+                <div className="border-t border-[#D2D4D6] dark:border-[#262626]">
                     <NavLink to="/settings" className={linkClasses} onClick={closeMobileMenu}>
                         <Settings className="w-5 h-5 mr-3" />
                         Paramètres
